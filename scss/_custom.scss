@@ -1,0 +1,324 @@
+///////////////////// Reset /////////////////////
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+//////////////////// Breakpoints ///////////////////
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px,
+// );
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media screen and (max-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-between($breakpoint-1, $breakpoint-2) {
+  @if (map-has-key($grid-breakpoints, $breakpoint-1)) and
+    (map-has-key($grid-breakpoints, $breakpoint-2))
+  {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint-1)) and (max-width: map-get($grid-breakpoints, $breakpoint-2)) {
+      @content;
+    }
+  }
+}
+
+//////////// Container & Columns //////////////////
+.container-fluid {
+  position: relative;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // @each $breakpoint in (sm, md, lg, xl, xxl) {
+  //   @include media-breakpoint-up($breakpoint) {
+  //     @if map-has-key($container-max-widths, $breakpoint) {
+  //       max-width: map-get($container-max-widths, $breakpoint);
+  //     }
+  //   }
+  // }
+}
+
+// @for $i from 1 through 12 {
+//   @each $breakpoint in (sm, md, lg, xl, xxl) {
+//     .col-#{$breakpoint}-#{$i} {
+//       width: 100%;
+//       @include media-breakpoint-up($breakpoint) {
+//         width: 100%/12 * $i;
+//       }
+//     }
+//   }
+// }
+
+//////////////////// Colors /////////////////////
+$white: hsl(0, 0%, 100%);
+$white-10: hsl(0, 0%, 10%);
+$white-17: hsl(0, 0%, 17%);
+$white-25: hsl(0, 0%, 25%);
+$white-50: hsl(0, 0%, 50%);
+$lavender: hsl(231, 77%, 90%);
+$dark: hsl(230, 35%, 7%);
+
+$colors: (
+  white: $white,
+  white-10: $white-10,
+  white-17: $white-17,
+  white-25: $white-25,
+  white-50: $white-50,
+  lavender: $lavender,
+  dark: $dark,
+);
+
+@each $key, $color in $colors {
+  .text-#{$key} {
+    color: $color;
+  }
+
+  .bg-#{$key} {
+    background-color: $color;
+  }
+}
+
+/////////////////// Typography /////////////////
+// Font Family
+h1,
+h2,
+h3,
+h4,
+.subheading-1 {
+  font-family: "Bellefair", serif;
+}
+
+h5,
+.subheading-2,
+.nav-text {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.body-text {
+  font-family: "Barlow", sans-serif;
+}
+
+// Font Size
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
+  line-height: 1.15;
+
+  @include media-breakpoint-down(md) {
+    font-size: 80px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 56px;
+  }
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  line-height: 1.2;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+}
+
+.subheading-1 {
+  font-size: 28px;
+}
+
+.subheading-2 {
+  font-size: 14px;
+  letter-spacing: 2.35px;
+}
+
+.nav-text {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: 14px;
+  }
+}
+
+.body-text {
+  font-size: 18px;
+  line-height: 1.8;
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 15px;
+  }
+}
+
+// Text Transform
+* {
+  text-transform: uppercase;
+}
+
+.body-text {
+  text-transform: none;
+}
+
+//////////////////////// Links ////////////////////////
+a {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: $white-50;
+  }
+
+  &:active {
+    text-decoration-color: $white;
+  }
+}
+
+.active-nav-link,
+.active-nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: $white;
+}
+/////////////////////// Mixins ////////////////////////
+// Absolute Center
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/////////////////// Customize utilities ///////////////
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.align-middle {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-md-center {
+  text-align: start;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.opacity-1 {
+  opacity: 0.1;
+}

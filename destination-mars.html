@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-destination">
+    <!-- Navbar Section -->
+    <nav
+      class="navbar navbar-top d-flex flex-row align-middle justify-content-between"
+    >
+      <!-- Nav Icon -->
+      <div class="nav-icon">
+        <img
+          class="nav-icon-img"
+          src="../assets/images/shared/logo.svg"
+          alt="navbar icon"
+        />
+      </div>
+
+      <!-- Nav Line -->
+      <div class="nav-line"></div>
+
+      <!-- Nav list -->
+      <div class="nav-list d-flex flex-row">
+        <div class="nav-item">
+          <a href="./index.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">00&nbsp;&nbsp;</span>Home</span
+            >
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="text-white active-nav-link"
+            ><span class="nav-text"
+              ><span class="nav-num">01&nbsp;&nbsp;</span>Destination</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./crew-commander.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">02&nbsp;&nbsp;</span>Crew</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./technology-vehicle.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">03&nbsp;&nbsp;</span>Technology</span
+            ></a
+          >
+        </div>
+      </div>
+
+      <!-- Nav Toggle Icon -->
+      <div class="nav-toggle-icon">
+        <img
+          src="./assets/images/shared/icon-hamburger.svg"
+          class="nav-toggle-icon-img"
+          alt="nav toggle icon"
+        />
+      </div>
+    </nav>
+
+    <!-- Header Line -->
+
+    <header class="header-line text-white position-relative">
+      <h5>
+        <span class="header-num">01&nbsp;&nbsp;</span>Pick your destination
+      </h5>
+    </header>
+
+    <!-- Main Section -->
+
+    <main class="destination container-fluid">
+      <!-- Picture Section -->
+      <div class="picture-container">
+        <img
+          src="./assets/images/destination/image-mars.png"
+          alt="mars image"
+        />
+      </div>
+
+      <!-- Main Text -->
+      <div class="text-container text-md-center">
+        <!-- Navbar -->
+        <div class="navbar navbar-middle d-flex flex-row">
+          <div class="nav-list d-flex flex-row">
+            <div class="nav-item">
+              <a class="nav-text text-lavender" href="./destination-moon.html"
+                >Moon</a
+              >
+            </div>
+            <div class="nav-item">
+              <a class="nav-text text-lavender active-nav-link" href="#"
+                >Mars</a
+              >
+            </div>
+            <div class="nav-item">
+              <a class="nav-text text-lavender" href="./destination-europa.html"
+                >Europa</a
+              >
+            </div>
+            <div class="nav-item">
+              <a class="nav-text text-lavender" href="./destination-titan.html"
+                >Titan</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="text-heading">
+          <h2 class="text-white">Mars</h2>
+        </div>
+
+        <!-- Description -->
+        <div class="text-description body-text text-lavender">
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </div>
+
+        <!-- Data -->
+        <div class="text-data d-flex flex-row">
+          <div class="distance">
+            <div class="subheading-2 text-lavender">Avg. distance</div>
+            <div class="subheading-1 text-white figure">225 mil. km</div>
+          </div>
+          <div class="travel-time">
+            <div class="subheading-2 text-lavender">Est. travel time</div>
+            <div class="subheading-1 text-white figure">9 months</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/main.js"></script>
+  </body>
+</html>

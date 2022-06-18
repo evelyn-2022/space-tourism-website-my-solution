@@ -1,0 +1,178 @@
+@use "../custom" as *;
+
+// Background Image
+.bg-destination {
+  /* Full height */
+  width: 100%;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // Desktop
+  background-image: url("../../assets/images/destination/background-destination-desktop.jpg");
+
+  @include media-breakpoint-down(md) {
+    background-image: url("../../assets/images/destination/background-destination-tablet.jpg");
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-image: url("../../assets/images/destination/background-destination-mobile.jpg");
+  }
+}
+
+// Header Line
+.header-line {
+  left: 11.5%;
+  top: 76px;
+
+  @include media-breakpoint-down(md) {
+    left: 5%;
+    top: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    top: 0px;
+    text-align: center;
+  }
+}
+
+.header-num {
+  color: $white-25;
+}
+
+// Picture
+.picture-container,
+.picture-container > img {
+  width: 445px;
+  height: 445px;
+
+  @include media-breakpoint-down(md) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.picture-container {
+  margin-top: 180px;
+  margin-left: 14%;
+  margin-right: 5%;
+
+  @include media-breakpoint-down(md) {
+    margin: 90px auto 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 35px auto;
+  }
+}
+
+// Main Text
+.text-container {
+  margin-right: 11.3%;
+  max-width: 445px;
+
+  @include media-breakpoint-down(md) {
+    margin: 0 auto;
+    max-width: 573px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 327px;
+  }
+
+  // Navbar Middle
+  .navbar-middle {
+    @include media-breakpoint-down(md) {
+      justify-content: space-around;
+    }
+
+    @include media-breakpoint-down(sm) {
+      justify-content: space-evenly;
+    }
+  }
+
+  .navbar-middle .nav-item:not(:last-child) {
+    padding-right: 2em;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 0.6em;
+    }
+  }
+
+  .navbar-middle a {
+    font-size: 16px;
+    text-underline-offset: 0.7em;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  // Heading
+  h2 {
+    padding-top: 0.8em;
+  }
+
+  .text-description {
+    border-bottom: 1px solid #383b4b;
+    padding-top: 18px;
+    padding-bottom: 54px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 16px;
+      padding-bottom: 49px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+      padding-bottom: 32px;
+    }
+  }
+
+  // Data
+  .text-data {
+    padding-bottom: 58px;
+    @include media-breakpoint-down(md) {
+      justify-content: space-evenly;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .distance,
+  .travel-time {
+    margin-top: 29px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 33px;
+    }
+  }
+
+  .distance {
+    margin-right: 18%;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+    }
+  }
+
+  .figure {
+    padding-top: 12px;
+  }
+}
+
+.active-nav-link {
+  color: $white;
+}

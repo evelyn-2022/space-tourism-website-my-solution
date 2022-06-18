@@ -1,0 +1,140 @@
+@use "../custom" as *;
+
+// Background Image
+.bg-home {
+  /* Full height */
+  width: 100%;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // Desktop
+  background-image: url("../../assets/images/home/background-home-desktop.jpg");
+
+  @include media-breakpoint-down(md) {
+    background-image: url("../../assets/images/home/background-home-tablet.jpg");
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-image: url("../../assets/images/home/background-home-mobile.jpg");
+  }
+}
+
+// Main Section
+.home.container-fluid {
+  margin-top: 220px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 100px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+  }
+}
+
+.main-text-container {
+  max-width: 448px;
+  margin-left: 10%;
+
+  @include media-breakpoint-down(md) {
+    margin: 0 auto;
+  }
+
+  h5 {
+    padding: 0 0.3em;
+  }
+
+  h1 {
+    margin-top: 0.2em;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 80px;
+    }
+  }
+
+  .body-text {
+    margin-top: 1.2em;
+    padding: 0 0.5em;
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 15px;
+    }
+  }
+}
+
+.btn-container,
+.btn-bg {
+  width: 274px;
+  height: 274px;
+
+  @include media-breakpoint-down(md) {
+    width: 242px;
+    height: 242px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.btn-container {
+  margin-right: 15%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: 130px auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 70px auto;
+  }
+
+  .btn-bg.bg-white {
+    h4 {
+      @include absoluteCenter;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.expand-ani {
+  animation: expand 1s 1 ease forwards;
+}
+
+.shrink-ani {
+  animation: shrink 1s 1 ease forwards;
+}

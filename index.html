@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-home">
+    <!-- Navbar Section -->
+    <nav
+      class="navbar navbar-top d-flex flex-row align-middle justify-content-between"
+    >
+      <!-- Nav Icon -->
+      <div class="nav-icon">
+        <img
+          class="nav-icon-img"
+          src="./assets/images/shared/logo.svg"
+          alt="navbar icon"
+        />
+      </div>
+
+      <!-- Nav Line -->
+      <div class="nav-line"></div>
+
+      <!-- Nav list -->
+      <div class="nav-list link-group d-flex flex-row">
+        <div class="nav-item">
+          <a href="#" class="text-white active-nav-link"
+            ><span class="nav-text"
+              ><span class="nav-num">00&nbsp;&nbsp;</span>Home</span
+            >
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="./destination-moon.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">01&nbsp;&nbsp;</span>Destination</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./crew-commander.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">02&nbsp;&nbsp;</span>Crew</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./technology-vehicle.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">03&nbsp;&nbsp;</span>Technology</span
+            ></a
+          >
+        </div>
+      </div>
+
+      <!-- Nav Toggle Icon -->
+      <div class="nav-toggle-icon">
+        <img
+          src="./assets/images/shared/icon-hamburger.svg"
+          class="nav-toggle-icon-img"
+          alt="nav toggle icon"
+        />
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+
+    <main class="home container-fluid">
+      <!-- Main Text -->
+      <div class="main-text-container text-md-center">
+        <h5 class="text-lavender">So, you want to travel to</h5>
+        <h1 class="text-white text-white">space</h1>
+        <div class="body-text text-lavender">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </div>
+      </div>
+
+      <!-- Btn -->
+      <a href="./destination-moon.html" class="btn-container position-relative">
+        <div
+          class="btn-bg bg-white bg-back opacity-1 rounded-circle position-absolute"
+        ></div>
+        <div class="btn-bg bg-white bg-front rounded-circle position-relative">
+          <h4 class="text-dark">explore</h4>
+        </div>
+      </a>
+    </main>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
