@@ -1,5 +1,7 @@
 @use "./custom";
-@use "./navbar";
 
-@use "./pages/home";
-@use "./pages/destination";
+@use "./components/navbar";
+@use "./components/home";
+@use "./components/destination";
+@use "./components/crew";
+@use "./components/technology";
