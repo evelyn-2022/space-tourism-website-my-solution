@@ -8,14 +8,6 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px,
-// );
-
 @mixin media-breakpoint-down($breakpoint) {
   @if map-has-key($grid-breakpoints, $breakpoint) {
     @media screen and (max-width: map-get($grid-breakpoints, $breakpoint)) {
@@ -100,26 +92,7 @@ html {
     justify-content: center;
     align-items: center;
   }
-
-  // @each $breakpoint in (sm, md, lg, xl, xxl) {
-  //   @include media-breakpoint-up($breakpoint) {
-  //     @if map-has-key($container-max-widths, $breakpoint) {
-  //       max-width: map-get($container-max-widths, $breakpoint);
-  //     }
-  //   }
-  // }
 }
-
-// @for $i from 1 through 12 {
-//   @each $breakpoint in (sm, md, lg, xl, xxl) {
-//     .col-#{$breakpoint}-#{$i} {
-//       width: 100%;
-//       @include media-breakpoint-up($breakpoint) {
-//         width: 100%/12 * $i;
-//       }
-//     }
-//   }
-// }
 
 //////////////////// Colors /////////////////////
 $white: hsl(0, 0%, 100%);

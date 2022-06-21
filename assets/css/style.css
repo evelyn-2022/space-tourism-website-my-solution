@@ -678,7 +678,7 @@ a:active {
 }
 
 .destination-picture-container {
-  margin-top: 180px;
+  margin-top: 140px;
   margin-left: 14%;
   margin-right: 5%;
 }
@@ -813,20 +813,20 @@ a:active {
 }
 
 .crew.container-fluid {
-  height: 804px;
+  position: absolute;
   bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .crew.container-fluid {
     margin-top: 110px;
     height: 820px;
+    justify-content: start;
   }
 }
 @media screen and (max-width: 576px) {
   .crew.container-fluid {
     margin-top: 20px;
     height: 590px;
-    justify-content: start;
   }
 }
 .crew.container-fluid .text-container {
@@ -843,7 +843,7 @@ a:active {
   .crew.container-fluid .text-container {
     margin-left: 0;
     margin-bottom: 0;
-    margin-top: 270px;
+    margin-top: 320px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -867,6 +867,7 @@ a:active {
 @media screen and (max-width: 576px) {
   .crew.container-fluid .text-container .text-description {
     max-width: 327px;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -922,6 +923,8 @@ a:active {
 }
 @media screen and (max-width: 768px) {
   .crew.container-fluid .picture-container {
+    position: absolute;
+    bottom: 0;
     width: 530px;
     height: 532px;
     margin: 0 auto;
@@ -930,7 +933,7 @@ a:active {
 @media screen and (max-width: 576px) {
   .crew.container-fluid .picture-container {
     position: absolute;
-    top: 20px;
+    top: 70px;
     width: 327px;
     height: 223px;
     border-bottom: 1px solid hsl(231deg, 25%, 29%);
@@ -979,7 +982,7 @@ a:active {
 .technology.container-fluid {
   align-items: start;
   justify-content: start;
-  margin-top: 247px;
+  margin-top: 207px;
   margin-left: 10%;
   margin-right: 0;
   padding-right: 0;

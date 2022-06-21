@@ -36,18 +36,18 @@
 }
 
 .crew.container-fluid {
-  height: 804px;
+  position: absolute;
   bottom: 0;
 
   @include media-breakpoint-down(md) {
     margin-top: 110px;
     height: 820px;
+    justify-content: start;
   }
 
   @include media-breakpoint-down(sm) {
     margin-top: 20px;
     height: 590px;
-    justify-content: start;
   }
 
   .text-container {
@@ -62,7 +62,7 @@
     @include media-breakpoint-down(sm) {
       margin-left: 0;
       margin-bottom: 0;
-      margin-top: 270px;
+      margin-top: 320px;
     }
 
     .crew-title {
@@ -86,6 +86,7 @@
 
       @include media-breakpoint-down(sm) {
         max-width: 327px;
+        margin-bottom: 50px;
       }
     }
 
@@ -147,6 +148,8 @@
     margin-right: 5%;
 
     @include media-breakpoint-down(md) {
+      position: absolute;
+      bottom: 0;
       width: 530px;
       height: 532px;
       margin: 0 auto;
@@ -154,7 +157,7 @@
 
     @include media-breakpoint-down(sm) {
       position: absolute;
-      top: 20px;
+      top: 70px;
       width: 327px;
       height: 223px;
       border-bottom: 1px solid hsl(231, 25%, 29%);
