@@ -20,8 +20,8 @@ navToggleIcon.addEventListener("click", function () {
 });
 
 // Set Link Active
-const navLinkGroup = document.querySelector(".nav-list.link-group");
-const navLinkItems = document.querySelectorAll(".nav-item a");
+const navLinkGroup = document.querySelector(".nav-list");
+const navLinkItems = document.querySelectorAll(".nav-list a");
 navLinkGroup.addEventListener("click", function (e) {
   const clickedLink = e.target.closest("a");
 
@@ -37,11 +37,48 @@ navLinkGroup.addEventListener("click", function (e) {
 // Explore Hover
 const btnBack = document.querySelector(".bg-back");
 const btnFront = document.querySelector(".bg-front");
-btnFront.addEventListener("mouseenter", function () {
-  btnBack.classList.add("expand-ani");
-  btnBack.classList.remove("shrink-ani");
-});
-btnFront.addEventListener("mouseleave", function () {
-  btnBack.classList.remove("expand-ani");
-  btnBack.classList.add("shrink-ani");
-});
+if (btnBack && btnFront) {
+  btnFront.addEventListener("mouseenter", function () {
+    btnBack.classList.add("expand-ani");
+    btnBack.classList.remove("shrink-ani");
+  });
+  btnFront.addEventListener("mouseleave", function () {
+    btnBack.classList.remove("expand-ani");
+    btnBack.classList.add("shrink-ani");
+  });
+}
+
+// Change Technology picture
+const toLandscape = function () {
+  const img = document.querySelector(".technology-img");
+  if (!img) return;
+
+  const winWidth = this.window.outerWidth;
+  const name = img.dataset.name;
+
+  if (winWidth <= 768) {
+    img.setAttribute(
+      "src",
+      `./assets/images/technology/image-${name}-landscape.jpg`
+    );
+  }
+};
+
+const toPortrait = function () {
+  const img = document.querySelector(".technology-img");
+  if (!img) return;
+
+  const winWidth = this.window.outerWidth;
+  const name = img.dataset.name;
+
+  if (winWidth > 768) {
+    img.setAttribute(
+      "src",
+      `./assets/images/technology/image-${name}-portrait.jpg`
+    );
+  }
+};
+window.addEventListener("load", toLandscape);
+window.addEventListener("resize", toLandscape);
+window.addEventListener("load", toPortrait);
+window.addEventListener("resize", toPortrait);

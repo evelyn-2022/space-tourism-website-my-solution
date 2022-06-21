@@ -307,6 +307,10 @@ a {
   flex-direction: row;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .align-middle {
   align-items: center;
 }
@@ -317,6 +321,10 @@ a {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-md-center {

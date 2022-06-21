@@ -113,7 +113,7 @@
   }
 }
 
-.nav-text {
+.navbar-top .nav-text {
   @include media-breakpoint-down(sm) {
     padding-top: 0px;
   }

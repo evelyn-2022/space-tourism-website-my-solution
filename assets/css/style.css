@@ -267,6 +267,10 @@ a:active {
   flex-direction: row;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .align-middle {
   align-items: center;
 }
@@ -277,6 +281,10 @@ a:active {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-md-center {
@@ -423,7 +431,7 @@ a:active {
 }
 
 @media screen and (max-width: 576px) {
-  .nav-text {
+  .navbar-top .nav-text {
     padding-top: 0px;
   }
 }
@@ -627,7 +635,6 @@ a:active {
 }
 
 .header-line {
-  width: 100%;
   left: 11.5%;
   top: 212px;
 }
@@ -788,10 +795,8 @@ a:active {
 
 .bg-crew {
   background: linear-gradient(to bottom, rgba(11, 13, 23, 0.6), rgba(11, 13, 23, 0.7)), url("../../assets/images/crew/background-crew-desktop.jpg");
-  /* Full height */
   width: 100%;
   height: 100%;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -820,8 +825,8 @@ a:active {
 @media screen and (max-width: 576px) {
   .crew.container-fluid {
     margin-top: 20px;
-    height: 490px;
-    justify-content: end;
+    height: 590px;
+    justify-content: start;
   }
 }
 .crew.container-fluid .text-container {
@@ -838,11 +843,12 @@ a:active {
   .crew.container-fluid .text-container {
     margin-left: 0;
     margin-bottom: 0;
+    margin-top: 270px;
   }
 }
 @media screen and (max-width: 576px) {
   .crew.container-fluid .text-container .crew-title {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 .crew.container-fluid .text-container .text-heading {
@@ -924,7 +930,7 @@ a:active {
 @media screen and (max-width: 576px) {
   .crew.container-fluid .picture-container {
     position: absolute;
-    top: 10px;
+    top: 20px;
     width: 327px;
     height: 223px;
     border-bottom: 1px solid hsl(231deg, 25%, 29%);
@@ -949,6 +955,174 @@ a:active {
 
 .crew .active-nav-link {
   background-color: hsl(0deg, 0%, 100%);
+}
+
+.bg-technology {
+  background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .bg-technology {
+    background-image: url("../../assets/images/technology/background-technology-tablet.jpg");
+  }
+}
+@media screen and (max-width: 576px) {
+  .bg-technology {
+    background-image: url("../../assets/images/technology/background-technology-mobile.jpg");
+  }
+}
+
+.technology.container-fluid {
+  align-items: start;
+  justify-content: start;
+  margin-top: 247px;
+  margin-left: 10%;
+  margin-right: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid {
+    margin-top: 120px;
+    margin-left: 0;
+    padding-left: 0;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid {
+    height: 570px;
+    margin-top: 40px;
+  }
+}
+.technology.container-fluid .nav-item,
+.technology.container-fluid .nav-item > a {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .nav-item,
+.technology.container-fluid .nav-item > a {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .nav-item,
+.technology.container-fluid .nav-item > a {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .nav-list {
+    margin-top: 360px;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .nav-list {
+    margin-top: 200px;
+  }
+}
+.technology.container-fluid .nav-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .nav-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}
+.technology.container-fluid .nav-item > a {
+  border: 1px solid hsl(0deg, 0%, 25%);
+}
+.technology.container-fluid .nav-item > a h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.technology.container-fluid .active-nav-link {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.technology.container-fluid .active-nav-link h4 {
+  color: #0b0d17;
+}
+.technology.container-fluid .text-container {
+  margin-left: 5.4%;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .text-container {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .text-container {
+    margin-top: 20px;
+  }
+}
+.technology.container-fluid .text-container .technology-heading {
+  margin-top: 11px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .text-container .technology-heading {
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .text-container .technology-heading {
+    margin-top: 9px;
+  }
+}
+.technology.container-fluid .text-container .technology-description {
+  max-width: 444px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .text-container .technology-description {
+    max-width: 458px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .text-container .technology-description {
+    max-width: 327px;
+  }
+}
+.technology.container-fluid .picture-container {
+  right: 144px;
+  top: -111px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .picture-container {
+    right: 0;
+    top: 0;
+  }
+}
+.technology.container-fluid .picture-container,
+.technology.container-fluid .picture-container > img {
+  width: 515px;
+  height: 527px;
+}
+@media screen and (max-width: 768px) {
+  .technology.container-fluid .picture-container,
+.technology.container-fluid .picture-container > img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 576px) {
+  .technology.container-fluid .picture-container,
+.technology.container-fluid .picture-container > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
