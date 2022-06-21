@@ -1,41 +1,3 @@
-///////////////////// Reset /////////////////////
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-figure,
-picture {
-  margin: 0;
-  font-weight: 400;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 //////////////////// Breakpoints ///////////////////
 $grid-breakpoints: (
   xs: 0,
@@ -77,6 +39,48 @@ $grid-breakpoints: (
     @media (min-width: map-get($grid-breakpoints, $breakpoint-1)) and (max-width: map-get($grid-breakpoints, $breakpoint-2)) {
       @content;
     }
+  }
+}
+
+///////////////////// Reset /////////////////////
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @include media-breakpoint-down(sm) {
+    overflow-y: scroll;
   }
 }
 
@@ -186,10 +190,26 @@ h2 {
 
 h3 {
   font-size: 56px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
 }
 
 h4 {
   font-size: 32px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
 }
 
 h5 {

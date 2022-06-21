@@ -1,27 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
-  02 Meet your crew
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
 
-  Mission Specialist
-  Mark Shuttleworth
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-crew">
+    <!-- Navbar Section -->
+    <nav
+      class="navbar navbar-top d-flex flex-row align-middle justify-content-between"
+    >
+      <!-- Nav Icon -->
+      <div class="nav-icon">
+        <img
+          class="nav-icon-img"
+          src="../assets/images/shared/logo.svg"
+          alt="navbar icon"
+        />
+      </div>
 
-  Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
-  the Linux-based Ubuntu operating system. Shuttleworth became the first South 
-  African to travel to space as a space tourist.
-</body>
+      <!-- Nav Line -->
+      <div class="nav-line"></div>
+
+      <!-- Nav list -->
+      <div class="nav-list d-flex flex-row">
+        <div class="nav-item">
+          <a href="./index.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">00&nbsp;&nbsp;</span>Home</span
+            >
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="./destination-moon.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">01&nbsp;&nbsp;</span>Destination</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./crew-commander.html" class="text-white active-nav-link"
+            ><span class="nav-text"
+              ><span class="nav-num">02&nbsp;&nbsp;</span>Crew</span
+            ></a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="./technology-vehicle.html" class="text-white"
+            ><span class="nav-text"
+              ><span class="nav-num">03&nbsp;&nbsp;</span>Technology</span
+            ></a
+          >
+        </div>
+      </div>
+
+      <!-- Nav Toggle Icon -->
+      <div class="nav-toggle-icon">
+        <img
+          src="./assets/images/shared/icon-hamburger.svg"
+          class="nav-toggle-icon-img"
+          alt="nav toggle icon"
+        />
+      </div>
+    </nav>
+
+    <!-- Header Line -->
+
+    <header class="header-line text-white position-absolute">
+      <h5><span class="header-num">02&nbsp;&nbsp;</span>Meet your crew</h5>
+    </header>
+
+    <!-- Main Section -->
+
+    <main class="crew container-fluid">
+      <!-- Main Text -->
+      <div class="text-container text-md-center position-relative">
+        <!-- Heading -->
+        <div class="crew-title">
+          <h4 class="text-white-50">Mission Specialist</h4>
+        </div>
+        <div class="text-heading">
+          <h3 class="text-white">Mark Shuttleworth</h3>
+        </div>
+
+        <!-- Description -->
+        <div class="text-description body-text text-lavender">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar navbar-middle d-flex flex-row">
+          <div class="nav-list d-flex flex-row">
+            <div class="nav-item">
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-commander.html"
+              ></a>
+            </div>
+            <div class="nav-item">
+              <a
+                class="active-nav-link rounded-circle bg-white-17"
+                href="./crew-specialist.html"
+              ></a>
+            </div>
+            <div class="nav-item">
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-pilot.html"
+              ></a>
+            </div>
+            <div class="nav-item">
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-engineer.html"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Picture Section -->
+      <div
+        class="picture-container position-relative d-flex justify-content-center"
+      >
+        <img
+          class="position-absolute"
+          src="./assets/images/crew/image-mark-shuttleworth.png"
+          alt="mars image"
+        />
+      </div>
+    </main>
+
+    <script src="./assets/main.js"></script>
+  </body>
 </html>

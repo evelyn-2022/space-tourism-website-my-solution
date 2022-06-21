@@ -32,7 +32,13 @@ html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 576px) {
+  body,
+html {
+    overflow-y: scroll;
+  }
 }
 
 .container-fluid {
@@ -149,9 +155,29 @@ h2 {
 h3 {
   font-size: 56px;
 }
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  h3 {
+    font-size: 24px;
+  }
+}
 
 h4 {
   font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  h4 {
+    font-size: 16px;
+  }
 }
 
 h5 {
@@ -342,7 +368,6 @@ a:active {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   padding-left: 8.5%;
-  padding-right: 11.7%;
 }
 @media screen and (max-width: 576px) {
   .navbar-top > .nav-list .nav-item {
@@ -602,19 +627,21 @@ a:active {
 }
 
 .header-line {
+  width: 100%;
   left: 11.5%;
-  top: 76px;
+  top: 212px;
 }
 @media screen and (max-width: 768px) {
   .header-line {
     left: 5%;
-    top: 40px;
+    top: 136px;
   }
 }
 @media screen and (max-width: 576px) {
   .header-line {
+    position: relative;
     left: 0;
-    top: 0px;
+    top: 10px;
     text-align: center;
   }
 }
@@ -659,101 +686,99 @@ a:active {
   }
 }
 
-.text-container {
+.destination-text-container {
   margin-right: 11.3%;
   max-width: 445px;
 }
 @media screen and (max-width: 768px) {
-  .text-container {
+  .destination-text-container {
     margin: 0 auto;
     max-width: 573px;
   }
 }
 @media screen and (max-width: 576px) {
-  .text-container {
+  .destination-text-container {
     max-width: 327px;
   }
 }
 @media screen and (max-width: 768px) {
-  .text-container .navbar-middle {
+  .destination-text-container .navbar-middle {
     justify-content: space-around;
   }
 }
 @media screen and (max-width: 576px) {
-  .text-container .navbar-middle {
+  .destination-text-container .navbar-middle {
     justify-content: space-evenly;
   }
 }
-.text-container .navbar-middle .nav-item:not(:last-child) {
+.destination-text-container .navbar-middle .nav-item:not(:last-child) {
   padding-right: 2em;
 }
 @media screen and (max-width: 576px) {
-  .text-container .navbar-middle .nav-item:not(:last-child) {
+  .destination-text-container .navbar-middle .nav-item:not(:last-child) {
     padding-right: 0.6em;
   }
 }
-.text-container .navbar-middle a {
+.destination-text-container .navbar-middle a {
   font-size: 16px;
   text-underline-offset: 0.7em;
 }
 @media screen and (max-width: 576px) {
-  .text-container .navbar-middle a {
+  .destination-text-container .navbar-middle a {
     font-size: 14px;
   }
 }
-.text-container h2 {
-  padding-top: 0.8em;
+.destination-text-container h2 {
+  padding-top: 0.6em;
 }
-.text-container .text-description {
+.destination-text-container .text-description {
   border-bottom: 1px solid #383b4b;
-  padding-top: 18px;
+  padding-top: 15px;
   padding-bottom: 54px;
 }
 @media screen and (max-width: 768px) {
-  .text-container .text-description {
+  .destination-text-container .text-description {
     padding-top: 16px;
     padding-bottom: 49px;
   }
 }
 @media screen and (max-width: 576px) {
-  .text-container .text-description {
+  .destination-text-container .text-description {
     padding-top: 15px;
     padding-bottom: 32px;
   }
 }
-.text-container .text-data {
-  padding-bottom: 58px;
-}
 @media screen and (max-width: 768px) {
-  .text-container .text-data {
+  .destination-text-container .text-data {
     justify-content: space-evenly;
   }
 }
 @media screen and (max-width: 576px) {
-  .text-container .text-data {
+  .destination-text-container .text-data {
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 58px;
   }
 }
-.text-container .distance,
-.text-container .travel-time {
+.destination-text-container .distance,
+.destination-text-container .travel-time {
   margin-top: 29px;
 }
 @media screen and (max-width: 576px) {
-  .text-container .distance,
-.text-container .travel-time {
+  .destination-text-container .distance,
+.destination-text-container .travel-time {
     margin-top: 33px;
   }
 }
-.text-container .distance {
+.destination-text-container .distance {
   margin-right: 18%;
 }
 @media screen and (max-width: 768px) {
-  .text-container .distance {
+  .destination-text-container .distance {
     margin-right: 0;
   }
 }
-.text-container .figure {
+.destination-text-container .figure {
   padding-top: 12px;
 }
 
@@ -762,6 +787,7 @@ a:active {
 }
 
 .bg-crew {
+  background: linear-gradient(to bottom, rgba(11, 13, 23, 0.6), rgba(11, 13, 23, 0.7)), url("../../assets/images/crew/background-crew-desktop.jpg");
   /* Full height */
   width: 100%;
   height: 100%;
@@ -769,17 +795,160 @@ a:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
 }
 @media screen and (max-width: 768px) {
   .bg-crew {
-    background-image: url("../../assets/images/crew/background-crew-tablet.jpg");
+    background: linear-gradient(to bottom, rgba(11, 13, 23, 0.6), rgba(11, 13, 23, 0.7)), url("../../assets/images/crew/background-crew-tablet.jpg");
   }
 }
 @media screen and (max-width: 576px) {
   .bg-crew {
-    background-image: url("../../assets/images/crew/background-crew-mobile.jpg");
+    background: linear-gradient(to bottom, rgba(11, 13, 23, 0.7), rgba(11, 13, 23, 0.8)), url("../../assets/images/crew/background-crew-mobile.jpg");
   }
+}
+
+.crew.container-fluid {
+  height: 804px;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid {
+    margin-top: 110px;
+    height: 820px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid {
+    margin-top: 20px;
+    height: 490px;
+    justify-content: end;
+  }
+}
+.crew.container-fluid .text-container {
+  margin-left: 10.4%;
+  margin-bottom: 94px;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .text-container {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .text-container {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .text-container .crew-title {
+    margin-top: 50px;
+  }
+}
+.crew.container-fluid .text-container .text-heading {
+  margin-top: 15px;
+  margin-bottom: 26px;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .text-container .text-heading {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+.crew.container-fluid .text-container .text-description {
+  max-width: 444px;
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .text-container .text-description {
+    max-width: 327px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .text-container .navbar-middle {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .text-container .navbar-middle .nav-list {
+    margin: 0 auto;
+  }
+}
+.crew.container-fluid .text-container .navbar-middle .nav-list .nav-item:not(:last-child) {
+  margin-right: 24px;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .text-container .navbar-middle .nav-list .nav-item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+.crew.container-fluid .text-container .navbar-middle .nav-list .nav-item a {
+  width: 15px;
+  height: 15px;
+  margin-top: 120px;
+  margin-bottom: 94px;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .text-container .navbar-middle .nav-list .nav-item a {
+    width: 10px;
+    height: 10px;
+    margin-top: 35px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .text-container .navbar-middle .nav-list .nav-item a {
+    margin: 0 auto;
+  }
+}
+.crew.container-fluid .text-container .navbar-middle .nav-list .nav-item a:hover {
+  background-color: hsl(0deg, 0%, 50%);
+}
+.crew.container-fluid .text-container .navbar-middle .nav-list .nav-item a:active {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.crew.container-fluid .picture-container {
+  width: 619px;
+  height: 712px;
+  bottom: 0;
+  margin-right: 5%;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .picture-container {
+    width: 530px;
+    height: 532px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .picture-container {
+    position: absolute;
+    top: 10px;
+    width: 327px;
+    height: 223px;
+    border-bottom: 1px solid hsl(231deg, 25%, 29%);
+  }
+}
+.crew.container-fluid .picture-container img {
+  bottom: 0;
+  max-width: 619px;
+  max-height: 712px;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .crew.container-fluid .picture-container img {
+    height: 532px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .crew.container-fluid .picture-container img {
+    height: 223px;
+  }
+}
+
+.crew .active-nav-link {
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

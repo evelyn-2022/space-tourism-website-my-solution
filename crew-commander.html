@@ -84,57 +84,67 @@
 
     <!-- Header Line -->
 
-    <header class="header-line text-white position-relative">
+    <header class="header-line text-white position-absolute">
       <h5><span class="header-num">02&nbsp;&nbsp;</span>Meet your crew</h5>
     </header>
 
     <!-- Main Section -->
 
-    <main class="crew container-fluid position-relative">
+    <main class="crew container-fluid">
       <!-- Main Text -->
-      <div class="text-container text-md-center">
+      <div class="text-container text-md-center position-relative">
         <!-- Heading -->
+        <div class="crew-title">
+          <h4 class="text-white-50">Commander</h4>
+        </div>
         <div class="text-heading">
-          <h2 class="text-white">Titan</h2>
+          <h3 class="text-white">Douglas Hurley</h3>
         </div>
 
         <!-- Description -->
         <div class="text-description body-text text-lavender">
-          The only moon known to have a dense atmosphere other than Earth, Titan
-          is a home away from home (just a few hundred degrees colder!). As a
-          bonus, you get striking views of the Rings of Saturn.
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
         </div>
 
         <!-- Navbar -->
         <div class="navbar navbar-middle d-flex flex-row">
           <div class="nav-list d-flex flex-row">
             <div class="nav-item">
-              <a class="nav-text text-lavender" href="./destination-moon.html"
-                >Moon</a
-              >
+              <a
+                class="active-nav-link rounded-circle bg-white-17"
+                href="./crew-commander.html"
+              ></a>
             </div>
             <div class="nav-item">
-              <a class="nav-text text-lavender" href="./destination-mars.html"
-                >Mars</a
-              >
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-specialist.html"
+              ></a>
             </div>
             <div class="nav-item">
-              <a class="nav-text text-lavender" href="./destination-europa.html"
-                >Europa</a
-              >
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-pilot.html"
+              ></a>
             </div>
             <div class="nav-item">
-              <a class="nav-text text-lavender active-nav-link" href="#"
-                >Titan</a
-              >
+              <a
+                class="rounded-circle bg-white-17"
+                href="./crew-engineer.html"
+              ></a>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Picture Section -->
-      <div class="picture-container">
+      <div
+        class="picture-container position-relative d-flex justify-content-center"
+      >
         <img
+          class="position-absolute"
           src="./assets/images/crew/image-douglas-hurley.png"
           alt="mars image"
         />
@@ -144,7 +154,3 @@
     <script src="./assets/main.js"></script>
   </body>
 </html>
-
-Commander Douglas Hurley Douglas Gerald Hurley is an American engineer, former
-Marine Corps pilot and former NASA astronaut. He launched into space for the
-third time as commander of Crew Dragon Demo-2.
