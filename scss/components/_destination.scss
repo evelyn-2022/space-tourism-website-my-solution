@@ -26,11 +26,11 @@
 // Header Line
 .header-line {
   left: 11.5%;
-  top: 200px;
+  top: 190px;
 
   @include media-breakpoint-down(md) {
     left: 5%;
-    top: 136px;
+    top: 146px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -63,12 +63,12 @@
 }
 
 .destination-picture-container {
-  margin-top: 140px;
+  margin-top: 120px;
   margin-left: 14%;
   margin-right: 5%;
 
   @include media-breakpoint-down(md) {
-    margin: 90px auto 50px;
+    margin: 110px auto 50px;
   }
 
   @include media-breakpoint-down(sm) {
